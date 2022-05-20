@@ -43,7 +43,12 @@ $('#search').on('click', function (e){
   var inputName = $('#name').val();
   var tableNum = getTableNum(inputName)[0];
   var realName = getTableNum(inputName)[1];
-  $('#table').text(tableNum);
-  $('#realName').text(realName);
+  if(tableNum){
+      $('#table').text(tableNum);
+      $('#realName').text(realName);
+  }
+  else{
+      alert("查無姓名，請洽現場招待人員");
+  }
 });
 </script>
